@@ -1,4 +1,5 @@
 <?php
+$queryProduk = mysqli_query($koneksi, "SELECT * FROM barang ORDER BY id DESC LIMIT 3");
 
 ?>
 <!-- Start Hero Section -->
@@ -41,16 +42,15 @@
                     <a class="product-item" href="cart.html">
                         <img src="admin/upload/<?= $rowProduk['foto'] ?>" class="img-fluid product-thumbnail">
                         <h3 class="product-title"><?= $rowProduk['nama_barang'] ?></h3>
-                        <strong class="product-price">$50.00</strong>
+                        <strong class="product-price"><?= "Rp. " . number_format($rowProduk['harga']) ?></strong>
 
                         <span class="icon-cross">
-                            <img src="images/cross.svg" class="img-fluid">
+                            <img src="asset/fe/images/cross.svg" class="img-fluid">
                         </span>
                     </a>
                 </div>
             <?php endwhile ?>
             <!-- End Column 2 -->
-
 
         </div>
     </div>
@@ -311,7 +311,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
                 <div class="post-entry">
-                    <a href="#" class="post-thumbnail"><img src="images/post-1.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="#" class="post-thumbnail"><img src="asset/fe/images/post-1.jpg" alt="Image" class="img-fluid"></a>
                     <div class="post-content-entry">
                         <h3><a href="#">First Time Home Owner Ideas</a></h3>
                         <div class="meta">
@@ -323,7 +323,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
                 <div class="post-entry">
-                    <a href="#" class="post-thumbnail"><img src="images/post-2.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="#" class="post-thumbnail"><img src="asset/fe/images/post-2.jpg" alt="Image" class="img-fluid"></a>
                     <div class="post-content-entry">
                         <h3><a href="#">How To Keep Your Furniture Clean</a></h3>
                         <div class="meta">
@@ -335,7 +335,7 @@
 
             <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
                 <div class="post-entry">
-                    <a href="#" class="post-thumbnail"><img src="images/post-3.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="#" class="post-thumbnail"><img src="asset/fe/images/post-3.jpg" alt="Image" class="img-fluid"></a>
                     <div class="post-content-entry">
                         <h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
                         <div class="meta">
