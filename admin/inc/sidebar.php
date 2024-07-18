@@ -13,7 +13,7 @@
                 <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block"><?= isset($_SESSION['$nama_lengkap']) ? $_SESSION['$nama_lengkap'] : '' ?></a>
+                <a href="#" class="d-block"><?= isset($_SESSION['nama_lengkap']) ? $_SESSION['nama_lengkap'] : '' ?></a>
             </div>
         </div>
 
@@ -93,9 +93,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../layout/fixed-sidebar.html" class="nav-link">
+                            <a href="?pg=member" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Fixed Sidebar</p>
+                                <p>Member</p>
                             </a>
                         </li>
                         <li class="nav-item">
